@@ -1,0 +1,47 @@
+import("FLCore")
+import("methods")
+exportClasses(
+	"FLCatch",
+	"FLCatches",
+	"FLMetier",
+	"FLMetiers",
+	"FLFleet",
+	"FLFleets"
+)
+exportMethods(
+	"Arith",
+	"FLCatch",
+	"FLCatches",
+	"FLFleet",
+	"FLFleets",
+	"FLMetier",
+	"FLMetiers",
+	"[",
+	"[<-",
+	"[[",
+	"addFLCatch",
+	"as.FLIndex",
+	"as.data.frame",
+	"catch",
+	"catch.n",
+	"catch.sel",
+	"catch.wt",
+	"catchNames",
+	"catches",
+	"catches<-",
+	"computeCatch",
+	"computeDiscards",
+	"computeLandings",
+	"dims",
+	"effort",
+	"effshare",
+	"iter",
+	"metier",
+	"propagate",
+	"revenue",
+	"setPlusGroup",
+	"summary",
+	"trim",
+	"vcost",
+	"window"
+)

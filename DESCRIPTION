@@ -1,0 +1,12 @@
+Package: FLFleet
+Title: Fleet, metier et al
+Version: 2.5.0
+Author: FLR Team and various contributors. Initial design by Laurence T. Kell & Philippe Grosjean.
+Description: FLCore contains the core classes and methods for FLR, a framework for fisheries modelling and management strategy simulation in R. Developed by a team of fisheries scientists in various countries. More information can be found at http://flr-project.org/, including a development mailing list.
+Depends: methods, FLCore, R(>= 2.15.1), 
+Imports: FLCore
+Maintainer: FLR Team <flr-team@flr-project.org>
+License: GPL-2
+LazyLoad: Yes
+LazyData: No
+Collate: genericMethods.R FLAccesors.R classes.R FLCatch.R FLMetier.R FLFleet.R coerce.R

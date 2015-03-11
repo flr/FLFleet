@@ -35,6 +35,7 @@ exportMethods(
 	"dims",
 	"effort",
 	"effshare",
+	"getPlural",
 	"iter",
 	"metier",
 	"propagate",

@@ -131,3 +131,8 @@ setMethod("[[", signature(x="FLMetier", i="ANY", j="missing"),
     return(x@catches[[i]])
 	}
 )  # }}}
+
+# FLMetier -> FLMetiers {{{
+setMethod('getPlural', signature(object='FLMetier'),
+	function(object) {
+		return('FLMetiers')}) # }}}

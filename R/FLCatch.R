@@ -317,3 +317,8 @@ setMethod('catch.sel', signature(object='FLCatch'),
     return(landings.sel(object) + discards.sel(object))
   }
 ) # }}}
+
+# getPlural {{{
+setMethod('getPlural', signature(object='FLCatch'),
+	function(object) {
+		return('FLCatches')}) # }}}

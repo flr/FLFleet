@@ -527,3 +527,8 @@ setMethod("dims", signature(obj="FLFleets"),
     ))
     }
 )    # }}}
+
+# FLFleet -> FLFleets {{{
+setMethod('getPlural', signature(object='FLFleet'),
+	function(object) {
+		return('FLFleets')}) # }}}

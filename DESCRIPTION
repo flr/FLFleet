@@ -10,4 +10,4 @@ Maintainer: FLR Team <flr-team@flr-project.org>
 License: GPL-2
 LazyLoad: Yes
 LazyData: No
-Collate: genericMethods.R FLAccesors.R classes.R FLCatch.R FLMetier.R FLFleet.R coerce.R
+Collate: genericMethods.R FLAccesors.R classes.R FLCatch.R FLMetier.R FLFleet.R coerce.R methods.R

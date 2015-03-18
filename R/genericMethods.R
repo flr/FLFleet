@@ -86,3 +86,6 @@ setGeneric("FLMetiers", function(object, ...)
 # FLFleets
 setGeneric("FLFleets", function(object, ...)
 	standardGeneric("FLFleets"))
+
+# tcost
+  setGeneric('tcost', function(object, ...) standardGeneric('tcost'))

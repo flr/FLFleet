@@ -35,6 +35,7 @@ exportMethods(
 	"dims",
 	"effort",
 	"effshare",
+	"tcost",
 	"getPlural",
 	"iter",
 	"metier",

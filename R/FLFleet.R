@@ -106,63 +106,6 @@ createFleetAccesors('landings.sel', landings.sel)
 createFleetAccesors('price', price)
 # }}}
 
-## Arith    {{{
-setMethod("Arith", ##  "+", "-", "*", "^", "%%", "%/%", "/"
-	signature(e1 = "FLQuants", e2 = "FLQuants"),
-	function(e1, e2) {
-		for(i in seq(length(e1)))
-			e1[[i]] <- callGeneric(e1[[i]], e2[[i]])
-		return(e1)
-	}
-)
-#setMethod("*", ##  "+", "-", "*", "^", "%%", "%/%", "/"
-#	signature(e1 = "FLQuants", e2 = "FLQuants"),
-#	function(e1, e2) {
-#		for(i in seq(length(e1)))
-#			e1[[i]] <- callGeneric(e1[[i]], e2[[i]])
-#		return(e1)
-#	}
-#)
-# }}}
-
-# revenue	{{{
-setMethod('revenue', signature('FLCatch'),
-	function(object)
-    if(!all(is.na(landings.n(object))))
-      return(quantSums(landings.n(object) * landings.wt(object) * price(object)))
-    else
-      return(landings(object) * price(object))
-)
-setMethod('revenue', signature('FLCatches'),
-	function(object, catch=unique(names(object)), ...)
-		return(lapply(object, revenue))
-)
-setMethod('revenue', signature('FLMetier'),
-  function(object, ...) {
-    res <- mcf(revenue(object@catches, ...))
-    if(length(res) > 1)
-      for (i in seq(length(res))[-1])
-        res[[1]] <- res[[1]] + res[[i]]
-    return(res[[1]])
-  }
-)
-setMethod('revenue', signature('FLMetiers'),
-  function(object)
-  {
-		return(lapply(object, revenue))
-  }
-)
-setMethod('revenue', signature('FLFleet'),
-  function(object, ...)
-  {
-    res <- mcf(revenue(object@metiers, ...))
-    if(length(res) > 1)
-      for (i in seq(length(res))[-1])
-        res[[1]] <- res[[1]] + res[[i]]
-    return(res[[1]])
-  }
-) # }}}
-
 ## iter {{{
 setMethod("iter", signature(obj="FLFleet"),
 	  function(obj, iter)
@@ -532,3 +475,17 @@ setMethod("dims", signature(obj="FLFleets"),
 setMethod('getPlural', signature(object='FLFleet'),
 	function(object) {
 		return('FLFleets')}) # }}}
+
+# tcost {{{
+setMethod("tcost", signature(object='FLFleet'), function(object) {
+
+	# fcost +
+	return(fcost(object) +
+
+	# vcost +
+	Reduce('+', vcost(object)) +
+
+	# ccost
+	crewshare(object) * revenue(object))
+
+}) # }}}

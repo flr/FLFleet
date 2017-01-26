@@ -39,6 +39,7 @@ exportMethods(
 	"getPlural",
 	"iter",
 	"metier",
+	"metier<-",
 	"propagate",
 	"revenue",
 	"setPlusGroup",

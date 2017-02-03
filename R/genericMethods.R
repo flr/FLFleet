@@ -19,21 +19,12 @@ setGeneric('FLMetier', function(catches, ...)
   setGeneric('effshare', function(object, ...) standardGeneric('effshare'))
   setGeneric('effshare<-', function(object, ..., value) standardGeneric('effshare<-'))
 
-# vcost
-  setGeneric('vcost', function(object, ...) standardGeneric('vcost'))
-  setGeneric('vcost<-', function(object, ..., value) standardGeneric('vcost<-'))
-
 # catches
   setGeneric('catches', function(object, ...) standardGeneric('catches'))
-#  setGeneric('catches<-', function(object, ..., value) standardGeneric('catches<-'))
 
 # effort
   setGeneric("effort", function(object, metier, ...) standardGeneric("effort"))
   setGeneric("effort<-", function(object, ..., value) standardGeneric("effort<-"))
-
-# fcost
-  setGeneric('fcost', function(object, ...) standardGeneric('fcost'))
-  setGeneric('fcost<-', function(object, ..., value) standardGeneric('fcost<-'))
 
 # capacity
   setGeneric('capacity', function(object, ...) standardGeneric('capacity'))

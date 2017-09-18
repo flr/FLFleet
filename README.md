@@ -1,7 +1,7 @@
 
 # FLFleet
-- Version: 2.5.20150311
-- Date: 2015-03-11
+- Version: 2.6.0
+- Date: 2017-09-09
 - Author: FLR Team and various contributors.
 - Maintainer: FLR Team <flr-team AT flr-project.org>
 - Repository: <https://github.com/flr/FLFleet/>

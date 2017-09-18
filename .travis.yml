@@ -1,0 +1,23 @@
+warnings_are_errors: false
+
+language: r
+
+matrix:
+  include:
+  - os: linux
+    r: release
+  - os: osx
+    r: release
+
+branches:
+  only:
+  - master
+
+sudo: false
+
+cache: packages
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

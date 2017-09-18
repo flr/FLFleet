@@ -22,7 +22,6 @@ or download from the [FLFleet releases page](https://github.com/flr/FLFleet/rele
 ## Build Status
 [![Travis Build Status](https://travis-ci.org/flr/FLFleet.svg?branch=master)](https://travis-ci.org/flr/FLFleet)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/flr/FLFleet?branch=master&svg=true)](https://ci.appveyor.com/project/flr/FLFleet)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/FLFleet)](https://cran.r-project.org/package=FLFleet)
 
 ## Releases
 - [All release](https://github.com/flr/FLFleet/releases/)

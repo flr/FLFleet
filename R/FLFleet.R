@@ -358,7 +358,7 @@ setMethod('computeLandings', signature(object='FLCatch'),
 
 setMethod('computeCatch', signature(object='FLMetier'),
   function(object, catch=names(object@catches))
-  Sums(lapply(object@catches[catch], computeCatch))
+  lapply(object@catches[catch], computeCatch)
 )
 setMethod('computeDiscards', signature(object='FLMetier'),
   function(object, catch=names(object@catches))

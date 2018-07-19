@@ -1,4 +1,4 @@
-# genericMethods - «Short one line description»
+# genericMethods
 # genericMethods
 
 # Copyright 2009 Iago Mosqueira, JRC. Distributed under the GPL 2 or later

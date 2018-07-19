@@ -1,7 +1,7 @@
 
 # FLFleet
-- Version: 2.6.0
-- Date: 2017-09-09
+- Version: 2.6.1
+- Date: 2018-07-19
 - Author: FLR Team and various contributors.
 - Maintainer: FLR Team <flr-team AT flr-project.org>
 - Repository: <https://github.com/flr/FLFleet/>
@@ -17,7 +17,7 @@ To install this package, start R and enter:
 or download from the [FLFleet releases page](https://github.com/flr/FLFleet/releases/latest)
 
 ## Documentation
-- [Help pages](http://flr-project.org/FLFleet/Reference)
+- [Help pages](http://www.flr-project.org/FLFleet/Reference)
 
 ## Build Status
 [![Travis Build Status](https://travis-ci.org/flr/FLFleet.svg?branch=master)](https://travis-ci.org/flr/FLFleet)

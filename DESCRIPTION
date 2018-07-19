@@ -1,15 +1,25 @@
 Package: FLFleet
-Title: Fleet, metier et al
-Version: 2.6.0
-Date: 2017-09-09
+Title: Fleet and Metier Classes and Methods
+Version: 2.6.1
+Date: 2018-07-19
 Authors@R: c(
   person("Iago", "Mosqueira", email = "iago.mosqueira@ec.europa.eu", role = "cre"),
-  person("Laurence T.", "Kell", email = "laurie.kell@iccat.int", role = "aut"))
-Description: FLFleet contains classes and methods for modelling of fishing fleets and their activity on multiple fish stocks. 
-Depends: methods, FLCore, R(>= 2.15.1), 
-Imports: FLCore
-Maintainer: FLR Team <flr-team@flr-project.org>
+  person("Laurence T.", "Kell", email = "laurie@kell.es", role = "aut"))
+Description: This package contains classes and methods for modelling of fishing fleets and their activity on multiple fish stocks. 
+Depends:
+  R(>= 2.15.1), 
+  methods,
+  FLCore
 License: GPL-2
 LazyLoad: Yes
 LazyData: No
-Collate: genericMethods.R FLAccesors.R classes.R FLCatch.R FLMetier.R FLFleet.R coerce.R methods.R
+Collate:
+  genericMethods.R
+  FLAccesors.R
+  classes.R
+  FLCatch.R
+  FLMetier.R
+  FLFleet.R
+  coerce.R
+  methods.R
+RoxygenNote: 6.0.1

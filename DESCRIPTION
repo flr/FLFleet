@@ -1,5 +1,5 @@
 Package: FLFleet
-Title: Fleet and Metier Classes and Methods
+Title: Classes and Methods for Fleets and Metiers
 Version: 2.6.1
 Date: 2018-07-19
 Authors@R: c(
@@ -7,7 +7,7 @@ Authors@R: c(
   person("Laurence T.", "Kell", email = "laurie@kell.es", role = "aut"))
 Description: This package contains classes and methods for modelling of fishing fleets and their activity on multiple fish stocks. 
 Depends:
-  R(>= 2.15.1), 
+  R(>= 3.5.0), 
   methods,
   FLCore
 License: GPL-2
@@ -22,4 +22,4 @@ Collate:
   FLFleet.R
   coerce.R
   methods.R
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

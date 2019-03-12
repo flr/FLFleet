@@ -1,18 +1,21 @@
-warnings_are_errors: false
-
 language: r
 
-matrix:
-  include:
-  - os: linux
-    r: release
-  - os: osx
-    r: release
+env:
+  - R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
+
+warnings_are_errors: false
+
+os:
+  - linux
+  - osx
+
+r:
+  - release
 
 branches:
   only:
   - master
-
+    
 sudo: false
 
 cache: packages
@@ -21,3 +24,26 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+after_success:
+  # Get PKGVER
+  - 'export PKGVER=$(sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)'
+  - 'export REL=$(echo $PKGVER | grep -o "\." | grep -c "\.")'
+  - "echo $PKGVER $REL"
+  # Build binary and remove the source archive
+  - "R CMD INSTALL --build FLFleet_$PKGVER.tar.gz"
+  - "rm FLFleet_$PKGVER.tar.gz"
+  # Look for packages
+  - "export RELEASE_PKG_FILE=$(ls FLFleet*gz)"
+  - "echo $RELEASE_PKG_FILE"
+
+deploy:
+  provider: releases
+  api_key:
+    secure: OwHR/j0tj1mNDsWgR9bBEFBnVufGh4Q4FsehKRRjG6tiBVSyga6g8T3LNS2+78Psil0yunG2yU4Vi91JgxnlZvg6ZpXIcH1j8F+qGni/3HZvE2JfOCe3XntudFwVNUPqxQn5QZMY36UNRjOfOlu3i8hPYPpsSaARrZyLjzPJSqc=
+  file: $RELEASE_PKG_FILE
+  skip_cleanup: true
+  draft: true
+  on:
+    repo: flr/FLFleet
+    condition: $REL = "2"

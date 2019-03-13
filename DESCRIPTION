@@ -10,6 +10,7 @@ Depends:
   R(>= 3.5.0), 
   methods,
   FLCore
+Additional_repositories: http://flr-project.org/R
 License: GPL-2
 LazyLoad: Yes
 LazyData: No

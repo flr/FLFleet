@@ -3,7 +3,7 @@ Title: Classes and Methods for Fleets and Metiers
 Version: 2.6.1
 Date: 2018-07-19
 Authors@R: c(
-  person("Iago", "Mosqueira", email = "iago.mosqueira@ec.europa.eu", role = "cre"),
+  person("Iago", "Mosqueira", email = "iago.mosqueira@wur.nl", role = "cre"),
   person("Laurence T.", "Kell", email = "laurie@kell.es", role = "aut"))
 Description: This package contains classes and methods for modelling of fishing fleets and their activity on multiple fish stocks. 
 Depends:

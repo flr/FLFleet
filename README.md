@@ -1,7 +1,7 @@
 
 # FLFleet
 - Version: 2.6.1
-- Date: 2018-07-19
+- Date: 25-05-2020
 - Author: FLR Team and various contributors.
 - Maintainer: FLR Team <flr-team AT flr-project.org>
 - Repository: <https://github.com/flr/FLFleet/>
